@@ -6,11 +6,14 @@
     <title>Document</title>
 </head>
 <style>
-    nav{
+    header{
         background-color: orangered;
         text-align: center;
         text-decoration:none;
 
+    }
+    a{
+        text-decoration: none;
     }
     body {
             width: 100vw;  /* Full viewport width */
@@ -27,12 +30,22 @@
             height: 100;
             background-color: aqua;
             border: 1px solid black;
+            display: block;
+            
              
         }
-    
+        .c1:nth-of-type(1),
+        .c1:nth-of-type(2) {
+        border: 2px solid green;
+        display: inline-block;
+        
+    }
+    .span~div{
+        border: 2px solid red;
+    }
 </style>
 <body>
-    
+    <header>
        <nav>
        
         <h1>Welcome to My Portfolio</h1>
@@ -44,8 +57,10 @@
         
         
        </nav>
+    </header>
+       
        <div class="container">
-        <div class="box" style="border: none;">
+        <div class="box" style="border: none;" >
             <h3>About Me</h3>
             <p>Hello! I am a web developer with a passion for creating function and beautiful web application</p>
             <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQaOY4CDlJCiGxD_PwkJIXY62ttfCaYPvG0AuddZPBSfFMOO68cq5rejE3-WGcKX_S4VsdCU6KuSEBZg31YJFoSbI7nAIe-_RbX2heSQNk" alt="mukesh ambani">
@@ -54,7 +69,7 @@
         <div class="box">
             <h4>
                 Project One:Personal Blog
-                <h6>Screenshot of my personal blog project</h6>
+                <h6  class="c1">Screenshot of my personal blog project</h6>
                 <p>A Personal blog where i write about web developement ,programming and technology</p>
                 <a href="HTML\project.html">viewProject</a>
                 <h5>Technology used</h5>
@@ -69,7 +84,7 @@
         </div>
         <div class="box">
             <h4>Project two:Ecommerce site</h4>
-            <h6>Screenshot of my eccomerce </h6>
+            <h6 class="c1">Screenshot of my eccomerce </h6>
             <p>A e-commerce site built a website built a real world online shopping experiance</p>
             <a href="HTML\project.html">project</a>
             <ul>
@@ -80,10 +95,10 @@
             </div>
             <div>
             <h2>Contact</h2>
-            <label for="Full Name ">FullName</label>
+            <label for="Full Name ">FullName:</label>
             <input type="text" placeholder="enyter your fullname">
             <br>
-            <label for="Email">Email</label>
+            <label for="Email">Email:</label>
             <input type="text" placeholder="enter your email here">
             <br>
             <label for="Message"></label>
@@ -92,6 +107,7 @@
             
             <button>submit</button>
             <br>
+        
             <footer>
 
                 <p>@2024Myportfolio</p>
@@ -106,6 +122,9 @@
 
             </footer>
 
+            
+                
+            
             
 
         
