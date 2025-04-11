@@ -1,33 +1,121 @@
-{
-    totalItems: 3,
-    items: ["Apples", "Bananas", "Bread"],
-    remo
-    vedItem: "Milk"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  *{
+    margin: 0px;
+    padding:0px;
+    text-decoration: none;
+    box-sizing: border-box;
+  
   }
-  Grocery Cart Management
-Background:
-You are building a simple grocery cart system using JavaScript. The cart should keep track of items added and removed.
+  .masai_logo{
+    width: 150px;
+  }
+  header{
+    border: 2px solid black;
+    width:100% ;
+    position: static;
+    
+  }
+  nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border:2px solid black;
+   
 
-Each item in the cart is represented by its name (string). Use an array to manage the cart.
+  }
+  nav>div{
+    gap: 20px;
+    display: flex;
+  
+  }
+  button{
+    border-radius: 20%;
+    background-color: rgb(42, 134, 111);
+    color: rgb(146, 1, 1);
 
-Tasks:
-Add Items to Cart:
+  }
+  button:hover{
+    background-color: chocolate;
+  }
+  .caurse{
+    width: 30px;
+  }
+  .H1_winningformula{
+    text-align: center;
+    font-size: 50px;
+  }
+  #winning_formula>div{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    border: 3px solid black;
+    text-align: center;
+  }
+ 
 
-Add the following items using push: "Apples", "Bananas", "Bread", "Milk"
-Remove Last Item:
+</style>
+<body>
+  <header>
+    <nav>
+      <div>
+        <img src="https://cdn.masaischool.com/masai-website/Masai_Logo_dark_web_b21aab8c62.webp" alt="logo" class="masai_logo">
+        <button class="course"> 
+          <select name="caurses" id="caurses">
+            <option value="">Course</option>
+            <option value="Sofware developemnt ">Software developemnt</option>
+            <option value="data analytics">Data analytics </option>
+            <option value="Business developemnt ">Business analyst </option>
+            <option value="sofware developemnt testing ">Software development testing </option>
+          </select>
+        </button>
+       
 
-Use pop to remove the last added item from the cart.
-Check Cart Status:
+      </div>
+      <div>
+        <a href="https://masaischool.com/interview-guides?_gl=1*16whl9x*_gcl_au*MTA3NjU0MTQwNy4xNzQyNjQ0MjUw">Interview Details</a>
+        <a href="https://masaischool.com/success-stories?_gl=1*1327avt*_gcl_au*MTA3NjU0MTQwNy4xNzQyNjQ0MjUw">Success Stories</a>
+        <a href="https://masaischool.com/hire-masai-graduates?_gl=1*1327avt*_gcl_au*MTA3NjU0MTQwNy4xNzQyNjQ0MjUw">hire from us</a>
+        <a href="https://www.masaischool.com/fees">fees</a>
+        <button>Registration</button>
+        <label for="pet-select">Choose a pet:</label>
 
-Return:
-The total number of items in the cart.
-The final list of items.
-The item that was removed.
-Example Output:
-{
-  totalItems: 3,
-  items: ["Apples", "Bananas", "Bread"],
-  removedItem: "Milk"
-}
 
-### Push your code on Github and submit the Github link in the input box given on assess platform for Q1
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section id="winning_formula">
+      <h1 class=H1_winningformula>Our winning formula</h1>
+      <div>
+        <div>
+          <img src="https://cdn.masaischool.com/masai-website/Group1707486432_ezgif_com_png_to_webp_converter_d66fdba127.webp" alt="logo">
+          <h3>pay after Placement</h3>
+          <p>Start learning today and pay when you start earning</p>
+        </div>
+        <div>
+          <img src="https://cdn.masaischool.com/masai-website/Group1707486432_ezgif_com_png_to_webp_converter_d66fdba127.webp" alt="logo">
+          <h3>pay after Placement</h3>
+          <p>Start learning today and pay when you start earning</p>
+        </div>
+        <div>
+          <img src="https://cdn.masaischool.com/masai-website/Group1707486432_ezgif_com_png_to_webp_converter_d66fdba127.webp" alt="logo">
+          <h3>pay after Placement</h3>
+          <p>Start learning today and pay when you start earning</p>
+        </div>
+      </div>
+    </section>
+
+
+
+    
+  </main>
+  
+</body>
+</html>
