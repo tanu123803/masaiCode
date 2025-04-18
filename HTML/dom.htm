@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main_container{
+        width: 100%;
+        height: 50px;
+        background-color: yellow;
+        border: 2px solid black;
+    }
+</style>
+<body>
+    <h1 id="heading1">heading 1 of this page</h1>
+    <p>pargraph1</p>
+    <p id="three">paragrap2</p>
+    <p>pargarph3</p>
+    <p 
+    >paragraph4</p>
+    <div class="container"></div>
+    <div id="main_container"></div>
+    
+</body>
+</html>
+<script>
+    //  let heading= document.getElementById('heading1')
+    //  console.log(heading1.innerText)
+    // let htagname=document.getElementsByTagName('h')
+    // console.log(tagname)
+    // document.getElementById('heading1').innerText="welcome to world dom"
+//     let div=document.createElement('div')
+//    div.innerText="hello my name is tanu chaturvedi"
+//    document.body.append(div)
+//    document.getElementById('three').remove()
+// let div=document.getElementById('main_container')
+// div.innerText="welcome to the divbox"
+// div.addEventListener("mouseover", ()=>{
+//     div.style.backgroundColor="white"
+    
+
+// })
+// div.addEventListener("mouseout", ()=>{
+//     div.style.backgroundColor="red"
+// })
+// let div=document.getElementById("main_container")
+// div.addEventListener("click", ()=>{
+//     div.style.backgroundColor="green"
+// })
+// div.addEventListener("cli")
+isBlue=true
+let div=document.getElementById('main_container')
+div.addEventListener("dblclick", ()=>{
+    div.style.backgroundColor=isBlue?"lightgreen" :"lightblue"
+    isBlue=!isBlue
+})
+</script>
