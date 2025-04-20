@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">heading1</h1>
+    <p>this is a pragraph 1</p>
+    <div class="container">this is div</div>
+    
+</body>
+</html>
+<script>
+    let h1=document.getElementById('heading')
+    h1.innerText="welcome to the Dom World!"
+    console.log(h1)
+    let p=document.getElementsByTagName('p')
+    p[0].style.color="blue"
+    let div=document.querySelector('.container')
+    div.style.backgroundColor="yellow"
+
+</script>

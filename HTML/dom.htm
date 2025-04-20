@@ -14,14 +14,22 @@
     }
 </style>
 <body>
-    <h1 id="heading1">heading 1 of this page</h1>
+    <!-- <h1 id="heading1">heading 1 of this page</h1>
     <p>pargraph1</p>
     <p id="three">paragrap2</p>
     <p>pargarph3</p>
     <p 
     >paragraph4</p>
     <div class="container"></div>
-    <div id="main_container"></div>
+    <div id="main_container"></div> -->
+    <!-- <h2>Add to cart</h2>
+    <input type="text" id="inputbox" placeholder="Add item here">
+    <button onclick="addproduct()">Add to cart</button>
+    <ul id="list"></ul> -->
+    <input type="text" id="todoInput" placeholder="tye text here">
+    <button onclick="addTodo()">Add itme</button>
+    <button onclick="clearAll()">Clear Item</button>
+    <ul id="TodoList"></ul>
     
 </body>
 </html>
@@ -50,10 +58,25 @@
 //     div.style.backgroundColor="green"
 // })
 // div.addEventListener("cli")
-isBlue=true
-let div=document.getElementById('main_container')
-div.addEventListener("dblclick", ()=>{
-    div.style.backgroundColor=isBlue?"lightgreen" :"lightblue"
-    isBlue=!isBlue
-})
+// /
+// function addproduct(){
+//     let input=document.getElementById('inputbox')
+//     let item=input.value
+//     let ul=document.getElementById('list')
+//     let li=document.createElement('li')
+//     ul.appendChild(li)
+// }
+function addTodo(){
+    let todoInput=document.getElementById('todoInput')
+    let todolist=document.getElementById('TodoList')
+    let li=document.createElement('li')
+    li.innerText=todoInput.value
+    todolist.appendChild(li)
+
+}
+function clearAll(){
+    document.getElementById("TodoList").innerHTML=" "
+
+}
+
 </script>
