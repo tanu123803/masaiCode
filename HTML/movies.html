@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        background-color: rgb(211, 195, 225);
+        margin: 20px;
+    }
+    input,button{
+        margin: 5px;
+        padding:8px;
+    }
+    #Movielist{
+        display: grid;
+        grid-template-columns: repeat(2,200px);
+        gap: 20px;
+        justify-content: center;
+    }
+</style>
+<body>
+    <h1>Firebase movies Database</h1>
+    <input type="text" id="tittle" placeholder="Movie tittle">
+    <input type="number" id="year" placeholder="year">
+    <input type="text" id="gener" placeholder="gener">
+    <input type="text" id="image" placeholder="imageurl">
+    <button onclick="Addmovies()">Add movie</button>
+    <h3>Movie list</h3>
+    <div id="Movielist"></div>
+   
+    
+    
+</body>
+</html>
+<script>
+    async function Addmovies(){
+        let movie={
+            tittle :document.getElementById('tittle').value,
+            year :document.getElementById('year').value,
+            genre :document.getElementById('gener').value,
+            image :document.getElementById('image').value,
+        }
+        let res=await fetch('https://moviesdatabse-9ea40-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json',{
+            method : 'POST',
+            headers : {
+                "Content-Type" : 'application/json',
+
+            },
+            body : JSON.stringify(movie)
+        })
+    }
+</script>

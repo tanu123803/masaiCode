@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        border: 3px solid black;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(222, 196, 178);
+    }
+    nav{
+        border: 2px solid black;
+        margin: 20px;
+        padding: 8px;
+        display: flex;
+        width: 100%;
+        text-decoration: none;
+        gap: 30%;
+        background-color: rgb(211, 204, 204);
+    }
+    #nav{
+        display: flex;
+        width: 100%;
+        gap: 30%;
+    }
+    table{
+        border: 2px solid black;
+        text-align: center;
+        background-color: aquamarine;
+        display: grid;
+       gap: 20px;
+
+    }
+    caption{
+        font-style: italic;
+        font-size: larger;
+        font-weight: 100;
+        text-align: center;
+    }
+    tr{
+        border: 2px solid black;
+    }
+    th{
+        border: 2px solid black;
+
+    }
+    td{
+        border: 2px solid black;
+
+    }
+    
+</style>
+<body>
+    <header>
+        <div id="nav">
+            <nav>
+                <a href="HTML\home.html">Home</a>
+                <a href="HTML\project.html">Profile</a>
+                <a href="HTML\dom.htm">Setting</a>
+                
+            </nav>
+        </div>
+       
+    </header>
+    <section>
+        <table>
+            <caption>Student Details Table</caption>
+            <thead>
+                <tr>
+                  <th >Student name</th>
+                  <th >subject</th>
+                  <th >Roll No</th>
+                  <th>Class</th>
+                  <th>Section</th>
+                  <th>Grade</th>
+                </tr>
+              </thead>
+              
+              <tbody>
+                <tr>
+                    <th>Akshay</th>
+                    <td>HTML</td>
+                    <td>121</td>
+                    <td>btech</td>
+                    <td>H</td>
+                    <td>A+</td>
+
+                </tr>
+              
+                <tr>
+                    <th>Anshika</th>
+                    <td>HTML</td>
+                    <td>122</td>
+                    <td>btech</td>
+                    
+                    <td>b+</td>
+
+                </tr>
+                
+                <tr>
+                    <th>Amutha</th>
+                    <td>HTML</td>
+                    <td>123</td>
+                    <td>btech</td>
+                    <td>A</td>
+                    <td>A+</td>
+
+                </tr>
+              
+                <tr>
+                    <th>cheris</th>
+                    <td>HTML</td>
+                    <td>124</td>
+                    <td>btech</td>
+                    <td>C</td>
+                    <td>A+</td>
+
+                </tr>
+                
+                <tr>
+                    <th>robin</th>
+                    <td>HTML</td>
+                    <td>125</td>
+                    <td>btech</td>
+                    <td>C</td>
+                    <td>A+</td>
+
+                </tr>
+              
+                <tr>
+                    <th>Reyansh</th>
+                    <td>HTML</td>
+                    <td>126</td>
+                    <td>btech</td>
+                    <td>C</td>
+                    <td>A+</td>
+
+                </tr>
+              </tbody>
+        </table>
+        <form action="requireddetails">
+            <h3>Student profile Form</h3>
+            <label for="">Student Name :</label>
+            <input type="text" placeholder="Student Name">
+            <br>
+            <label for="">Age :   </label>
+            <input type="text" placeholder="Enter your age">
+            <br>
+            <label for="">Email :</label>
+            <input type="text" placeholder="Enter your email">
+            <br>
+            <label for="Courses">Courses</label>
+            <select name="" id="">
+            <option value="text">Software developemnt </option>
+            <option value="text">Data analytics</option>
+            <option value="text"> digital marketing</option>
+            <option value="text">software testing</option>
+
+            </select>
+            <fieldset>
+                <legend>
+                    Select A Gender:
+                </legend>
+                <div>
+                    <input type="radio" id="Male" name="drone" value="male" checked />
+                    <label for="male">Male</label>
+                  </div>
+                
+                  <div>
+                    <input type="radio" id="female" name="drone" value="female" />
+                    <label for="female">Female</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="Other" name="drone" value="Other" />
+                    <label for="Other">Other</label>
+                  </div>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Skills:</legend>
+                <div>
+                    <input type="checkbox" id="Other" name="drone" value="Other" />
+                    <label for="Other">Speaking</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="Other" name="drone" value="Other" />
+                    <label for="Other">Coding</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="Other" name="drone" value="Other" />
+                    <label for="Other">DSA</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="Other" name="drone" value="Other" />
+                    <label for="Other">UI  design</label>
+                  </div>
+            </fieldset>
+            
+            
+        </form>
+        <br>
+        <h3>profile Image Upload</h3>
+        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+
+    </section>
+    <button onclick="click" >Submit  button</button>
+    
+    
+</body>
+</html>
+<script>
+    button.addEventListener("click", (event) => {
+    button. background-color: = `black`;
+});
+addEventListener("click", (event) => {body.background-color:black })
+
+onclick = (event) => { body.background-color:black}
+
+</script>

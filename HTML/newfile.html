@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        text-align: center;
+        margin: 20px;
+        padding: 8px;
+        gap: 10px;
+    }
+</style>
+<body>
+    <h1>Firebase Movie Database</h1>
+    <input type="text" id="Tittle " placeholder="Movietittle ">
+    <input type="number" id="Year" placeholder="Year">
+    <input type="text" id="gener" placeholder="gener">
+    <input type="text" id="image" placeholder="image url">
+    <button onclick="SaveMovie()">Save Movie</button>
+    <h3>Movie list</h3>
+    <div id="movie List"></div>
+    
+</body>
+</html>
+<script>
+    let FirebaseURL=https://moviesdatabse-9ea40-default-rtdb.asia-southeast1.firebasedatabase.app/
+    async function fetchMovies(){
+        let res= await fetch('${firebaseURL}.json')
+        let data= await resp.json()
+        if(!data) return[]
+        return Onject.entries(data).map(([id,movie])=>({id,...movie}))
+    }
+</script>
