@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="username"><br>
+    <input type="password" placeholder="password"><br>
+    <input type="text" placeholder="mail"><br>
+    <button onclick="handleclick()">Submit Form</button>
+    <div id="hoverdiv" style="width: 200px; height: 200px;background-color: aqua;">Hover on me</div>
+    <div id="yellow">i am div1</div>
+    <div class="red">hellow i am div 2</div>
+    <div class="red">hellow i am div 3</div>
+    <div class="red">heloooooooooooooo</div>
+    <div class="red">hiiiiiiiiiiiiiiii</div>
+    <div class="red">yupppppppppp</div>
+    <div class="red">yeeeeeeeeee</div>
+    <div class="red">yoooooooooooo</div>
+    <table>
+        <tbody>
+            <tr>
+                <td>i am table data</td>
+            </tr>
+            <tr>
+                <td>i am table data</td>
+            </tr>
+            <tr>
+                <td>i am table data</td>
+            </tr>
+            <tr>
+                <td>i am table data</td>
+            </tr>
+            <tr>
+                <td>i am table data</td>
+            </tr>
+            <tr>
+                <td>i am table data</td>
+            </tr>
+            <tr>
+                <td>i am table data</td>
+            </tr>
+            <tr>
+                <td>i am table data</td>
+            </tr>
+            <tr>
+                <td>i am table data</td>
+            </tr>
+            <tr>
+                <td>i am table data</td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="changetextbtn">Click me</button>
+    <p id="textpara">I am a boring text</p>
+    <button onclick="generatelist()">generate list</button>
+    <ul id="list"></ul>
+
+
+
+    
+</body>
+</html>
+<script>
+    function handleclick(){
+        document.body.style.backgroundColor="yellow"
+
+    }
+    const div=document.getElementById('hoverdiv')
+    div.addEventListener("mouseover",()=>{
+        div.style.backgroundColor="lightgreen"
+    })
+    div.addEventListener("mouseout",()=>{
+        div.style.backgroundColor="aqua"
+    })
+    let htmlcollection= document.getElementsByClassName('red')
+    for(let i=0;i<htmlcollection.length;i++){
+        htmlcollection[i].style.color='red'
+    }
+   let parentdiv= document.getElementById('yellow')
+   parentdiv.style.color="green"
+   let nodelist=document.querySelectorAll('.red')
+   nodelist.forEach((ele,index)=>{
+    ele.style.color='green'
+
+   })
+   let tablerow=document.querySelectorAll('tr')
+    tablerow.forEach((ele,index)=>{
+        if(index%2==0){
+            ele.style.backgroundColor="lightblue"
+        }else{
+            ele.style.backgroundColor="lightgrey"
+        }
+    })
+    let button=document.getElementById("changetextbtn")
+    let p=document.getElementById('textpara')
+    button.addEventListener('click',()=>{
+        p.innerText="i am a interesting tag"
+        
+    })
+    let item=["aple","banana","mango","grapes"]
+    function generatelist(){
+        let listcontainer=document.getElementById("list")
+        listcontainer.innerHTML=""
+        item.forEach((ele)=>{
+            let li=document.createElement("li");
+            li.innerText=ele
+            listcontainer.appendChild(li)
+
+        })
+    }
+   
+</script>
