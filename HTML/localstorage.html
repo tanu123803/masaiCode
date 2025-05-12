@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Shopping list</h2>
+    <input type="text" id="itemInput" placeholder="Add product">
+    <button onclick="Addproduct()">Add product</button>
+    <ul id="list"></ul>
+    <input type="text" id="todoInput" placeholder="Add item here">
+    <button onclick="Addtodo()">Add Todo</button>
+    <button onclick="Cleartodo()">clear Todo's</button>
+    <ul id="list"></ul>
+    
+</body>
+</html>
+<script>
+    function Addproduct(){
+        let input=document.getElementById('itemInput')
+        let item=input.value
+        let ul=document.getElementById("list")
+        let li=document.createElement("li")
+        li.innerText=item
+        ul.append(li)
+    }  
+    let obj={name:"tommy",age:25}
+    console.log(obj)
+    localStorage.setItem("userdata",JSON.stringify(obj))
+    console.log(localStorage.getItem("userData"))
+    JSON.parse(localStorage.getItem("userdata"))
+    function Addtodo(){
+        let todoinput=document.getElementById("todoInput")
+        let item=todoinput.value
+        let ul=document.getElementById('list')
+        let li=document.createElement('li')
+        li.innerText=item
+        ul.append(li)
+    }
+    function Cleartodo(){
+        document.getElementById('list').innerText=""
+    }
+    function Addtodo(){
+        let todoInput=document.getElementById('todoInput').value
+        let tasks=JSON.parse(localStorage.getItem('tasks'))||[]
+        tasks.push(todoInput)
+        localStorage.setItem('tasks'.JSON.stringify(tasks))
+        displaydata()
+    }
+    function displaydata(){
+        let tasks=JSON.parse(localStorage.getItem('tasks'));
+        let list=document.getElementById('list');
+        list.innerHTML=""
+        tasks.forEach((ele)=>{
+            let li=document.createElement('li');
+            li.innerText=ele;
+            list.appendChild(li)
+        })
+    }
+    function Cleartodo(){
+        localStorage.removeItem('tasks')
+        displaydata()
+
+    }
+
+
+</script>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<style>
+    body{
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    padding: 20px;
+}
+.container{
+    background-color: azure;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+h2{
+    color: rgb(121, 121, 121);
+    margin-bottom: 20px;
+}
+input{
+    width: 100%;
+    padding: 10px 0;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    font-size: 16px;
+}
+button{
+    width: 100%;
+    background-color: rgb(89, 89, 186);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16x;
+    
+}
+p{
+    font-size: 14px;
+    margin-top: 10px;
+}
+@media(max-width:480px){
+    .container{
+        width:90%;
+        padding: 20px;
+    }
+}
+
+</style>
+
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <input type="mail" id="login-mail" placeholder="Enter Email">
+        <input type="password" id="login-password" placeholder="Enter Password">
+        <button id="login-btn">Login</button>
+        <p id="login-message"></p>
+        <p>Don't have and account <a href="signup.html">signup</a></p>
+    </div>
+    <script type="module" src="js/auth.html"></script>
+    
+</body>
+</html>

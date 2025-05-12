@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+</style>
+<body>
+    <div>
+        <input type="name" id="Name" placeholder="emter your name here">
+        <input type="name" id="email" placeholder="enter your mail here">
+        <input type="city" id="city" placeholder="enter your city">
+        <input type="company name" id="company name" placeholder="enter your company">
+    </div>
+    
+</body>
+</html>
+<script>
+    async function getData() {
+  const url = "https://jsonplaceholder.typicode.com/users";
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const json = await response.json();
+    console.log(json);
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+</script>

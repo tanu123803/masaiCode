@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 500px;
+    }
+    button{
+        color: antiquewhite;
+        background-color: brown;
+        padding: 10px 20px;
+        font-size: 20px;
+        border: none;
+    }
+    
+</style>
+<body style="height: 60000px;">
+    <input type="text" id="searchinput" placeholder="search here">
+    <!-- throtling -->
+     <div>
+        <button id="buybutton">Buy</button>
+     </div>
+    
+</body>
+</html>
+<script>
+    // let timer:
+    // document.getElementById("searchinput").addEventListener('input',function(event){
+        
+
+    //     clearTimeout(timer)
+
+
+    //     timer=setTimeout(()=>{
+    //         searchMovie(event.target.value)
+    //         console.log("timer ended and api is called")
+    //     },5000)
+
+    // })
+    // function searchMovie(query){
+    //     console.log("making APIreuest for ",query)
+
+    // }
+    // throtling
+    // document.getElementById("buybutton").addEventListener("click", buyitem)
+    // let canClick=true;
+    // function buyitem(){
+    //     console.log("button clicked")
+    //     if (canClick){
+    //         console.log("item bought..")
+    //         canclick=false//block the user click
+    //         setTimeout(()=>{
+    //             canclick=true
+    //         },1000)
+    //     }
+    // }
+    // scrolling
+      let lastscrollTime =0
+    window.addEventListener("scroll", ()=>{
+        let now =Date.now()
+        if(now-lastscrollTime>=1000){
+            console.log("user scrool")
+            printData()
+            lastscrollTime=now
+            
+        }
+        
+    })
+    function printdata(){
+            console.log("user scrolled")
+        }
+        
+</script>

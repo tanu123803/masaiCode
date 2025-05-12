@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #productContainer{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+       
+        width: 20%;
+    }
+    img{
+        max-width: 100%;
+       
+    }
+    #productContainer>div{
+        border: 2px solid black;
+        text-align: center;
+    }
+</style>
+<body onload="fetchproduct()">
+    <div id="productContainer"></div>
+    <h3></h3>
+    <img src="" alt="">
+    <p></p>
+    <button onclick="fetchProduct()" id="btn">fetch product</button>
+    <select name="" id="categoryfilter" onchange="categoryfilter()">
+        <option value="All">All</option>
+        <option value="men's clothing">mens</option>
+        <option value="jewelery">jewellery</option>
+        <div id="productcontainer"></div>
+    </select>
+    
+</body>
+</html>
+<script>
+    // let fetchdata= fetch("https://fakestoreapi.com/products")
+    // fetchdata
+    // .then((response)=>response.json())
+    // .then((product)=>console.log(product))
+    async function fetchProduct(){
+     try {
+        
+          let response= await fetch("https://jsonplaceholder.typicode.com/users")
+          let product=await response.json()
+          console.log(product[0].price)
+          let filteredproduct=product.filter((product)=>product.price>150)
+          console.log(filteredproduct)
+     } catch (error) {
+        console.log(error)
+        
+     }
+        
+    }
+    fetchProduct()
+    async function fetchProduct(){
+        let button=document.getElementById("btn")
+        try {
+            
+             button.disabled=true
+            let response=await fetch("https://fakestoreapi.com/products")
+            let product=await response.json()
+            console.log(product)
+            let container=document.getElementById("productContainer")
+            product.forEach((product,index)=>{
+                let productbox=document.createElement("div")
+                // let h4=document.createElement("h4")
+                // h4.innerText=product.title
+                // let p=document.createElement("p")
+                // p.innerText=product.price
+                // productbox.append(h4,p)
+                productbox.innerHTML=`
+                <h3>${product.price}</h3>
+                <img src="${product.image}" alt="">
+                <p>${product.price}</p>
+        
+                `
+                container.appendChild(productbox)
+    
+    
+            })
+        } catch (error) {
+            alert("failed to fetch the product")
+            
+        }finally{
+            button.disabled=false
+        }
+    }
+    fetchProduct()
+    async function categoryfilter(){
+        let response= await fetch("https://fakestoreapi.com/products")
+        let product=await response.json()
+        console.log(product)
+        let selectedcategory=document.getElementById('categoryfilter').value
+        console.log(selectedcategory)
+        let filteredproduct = selectedcategory === "All"
+        ? product
+        : product.filter((product) => product.category === selectedcategory);
+    }
+    categoryfilter()
+</script> 
