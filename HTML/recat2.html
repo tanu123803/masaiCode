@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    
+    <div id="root">hello from dom</div>
+    <script type="text/babel" data-type="module">
+        let babel= <h1>hlw from babel</h1>
+        let fruits=["apple","grapes","banana"];
+        let ul=React.createElement("ul",null,fruits.map((fruit)=>React.createElement("li",null,fruit)))
+        let button=React.createElement("button",{
+            onClick:()=>alert("button is clicked from react")
+        },"clickme")
+        let h1=React.createElement("h1",{
+            id:"heading",
+            style:{color:"red"}
+        },"this is the first heading")
+        let element =React.createElement("h1",null,"hello from my first react program")
+        let div=React.createElement("div",null,React.createElement("p",null,"i am a p tag from react"),React.createElement("h1",null,"i am i hrading from ptag of react elemnt"))
+        let root=ReactDOM.createRoot(document.getElementById("root"))
+        root.render(babel)
+        
+
+    </script>
+
+    
+</body>
+</html>
