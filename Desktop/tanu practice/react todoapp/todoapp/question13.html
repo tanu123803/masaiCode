@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>React Counter App</title>
+</head>
+<body>
+  <h2>Simple Counter App</h2>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    function CounterApp() {
+      const [count, setCount] = React.useState(0);
+
+      function increment() {
+        setCount(count + 1);
+      }
+
+      function decrement() {
+        if (count > 0) {
+          setCount(count - 1);
+        }
+      }
+
+      function reset() {
+        setCount(0);
+      }
+
+      return (
+        <div>
+          <h3>Count: {count}</h3>
+
+          <button onClick={increment}>Increment</button>
+          <button onClick={decrement}>Decrement</button>
+          <button onClick={reset}>Reset</button>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<CounterApp />);
+  </script>
+</body>
+</html>
