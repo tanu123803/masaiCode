@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>React Todo List - CDN Version</title>
+</head>
+<body>
+
+  <div id="root"></div>
+
+
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+  
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  
+  <script type="text/babel">
+    const { useState } = React;
+
+    function TodoList() {
+      const [tasks, setTasks] = useState(["Buy milk", "Study React"]);
+      const [newTask, setNewTask] = useState("");
+
+      const addTask = () => {
+        if (newTask.trim() === "") return;
+        setTasks([...tasks, newTask.trim()]);
+        setNewTask("");
+      };
+
+      const clearTasks = () => {
+        setTasks([]);
+      };
+
+      return (
+        <div>
+          <h2>Todo List</h2>
+          <input
+            type="text"
+            placeholder="Enter new task"
+            value={newTask}
+            onChange={(e) => setNewTask(e.target.value)}
+          />
+          <button onClick={addTask}>Add Task</button>
+          <button onClick={clearTasks} style={{ color: 'red' }}>Clear All</button>
+
+          {tasks.length === 0 ? (
+            <p>No tasks available.</p>
+          ) : (
+            <ul>
+              {tasks.map((task, index) => (
+                <li key={index}>{task}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<TodoList />);
+  </script>
+</body>
+</html>
