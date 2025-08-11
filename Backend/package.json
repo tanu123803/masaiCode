@@ -10,6 +10,10 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "is-even": "^1.0.0"
+    "express": "^5.1.0",
+    "factorial": "^2.0.0",
+    "is-even": "^1.0.0",
+    "is-prime": "^1.0.1",
+    "nodemon": "^3.1.10"
   }
 }

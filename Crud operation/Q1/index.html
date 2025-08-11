@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button ondblclick="getdata()">get data</button>
+    
+</body>
+<script>
+    async function getdata(){
+        try {
+            let response=await fetch("https://fakestoreapi.in/api/products");
+            let result= await response.json()
+            console.log(result)
+            
+        } catch (error) {
+            console.log("having issue in fetching the error")
+            
+        }
+    }
+</script>
+</html>

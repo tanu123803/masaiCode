@@ -1,0 +1,17 @@
+{
+
+    "courses":[
+        {
+            "id":1,
+            "title": "Intro to backend",
+            "instructor":"alice",
+            "duration": "10"
+        },
+        {
+            "id":2,
+            "title": "Intro to express",
+            "instructor":"tommy",
+            "duration": "10"
+        }
+    ]
+}
