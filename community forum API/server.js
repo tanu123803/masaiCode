@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt');
 const postRouter = require("./Router/post.router");
 const saltRounds = 10;
 const myPlaintextPassword = 's0/\/\P4$$w0rD';
-const someOtherPlaintextPassword = 'not_bacon';
+const someOtherPlaintextPassword = 'not_bacon';  
 const app = express();
 app.use(express.json())
 connectToDb();
